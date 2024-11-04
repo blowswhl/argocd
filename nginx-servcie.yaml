@@ -16,7 +16,7 @@ spec:
       - name: dockerhub-credentials  # DockerHub 인증 비밀
       containers:
       - name: nginx
-        image: nginx:1.24
+        image: blowswhl/keduitlab:black
 
 ---
 apiVersion: v1
