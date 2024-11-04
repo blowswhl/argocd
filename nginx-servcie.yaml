@@ -1,10 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
-  namespace: nginx
-  labels:
-    app: nginx
+  name: deploy-test01
 spec:
   replicas: 3
   selector:
@@ -17,9 +14,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: blowswhl/keduitlab:blue
-        ports:
-        - containerPort: 80
+        image: nginx:1.24
 
 ---
 apiVersion: v1
