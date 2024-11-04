@@ -12,6 +12,8 @@ spec:
       labels:
         app.kubernetes.io/name: web-deploy
     spec:
+      imagePullSecrets:
+      - name: dockerhub-credentials  # DockerHub 인증 비밀
       containers:
       - name: nginx
         image: nginx:1.24
@@ -28,4 +30,4 @@ spec:
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 80  # targetPort 추가 (optional)
+      targetPort: 80  # 이미 설정된 targetPort
